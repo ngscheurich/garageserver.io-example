@@ -1,5 +1,4 @@
 const express = require('express');
-const debug = require('debug')('gs-example');
 const GameServer = require('./lib/GameServer');
 const path = require('path');
 const io = require('socket.io');
@@ -14,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 const server = app.listen(app.get('port'), function () {
-  debug('Express server listening on port %s', app.get('port'));
+  console.log('Express server listening on port %s', app.get('port'));
 });
 
 const sockets = io.listen(server);
