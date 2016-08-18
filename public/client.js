@@ -7,7 +7,7 @@ const ctx = canvas.getContext('2d');
 const keyboard = new THREEx.KeyboardState();
 const colorHash = new ColorHash();
 
-GarageServerIO.initializeGarageServer('http://localhost:3000', {
+GarageServerIO.initializeGarageServer('http://localhost:5000', {
   onReady: startUpdate,
 });
 
